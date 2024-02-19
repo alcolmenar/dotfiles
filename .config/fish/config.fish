@@ -3,10 +3,7 @@ abbr -a e nvim
 abbr -a vim nvim
 abbr -a m make
 abbr -a g git
-abbr -a gc 'git checkout'
-abbr -a ga 'git add -p'
 abbr -a vimdiff 'nvim -d'
-abbr -a ct 'cargo t'
 
 if status --is-interactive
     if ! set -q TMUX
