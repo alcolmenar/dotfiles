@@ -1,0 +1,6 @@
+[submodule ".config/base16-shell"]
+	path = .config/base16-shell
+	url = git@github.com:tinted-theming/base16-shell.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
