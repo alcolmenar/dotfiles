@@ -5,13 +5,6 @@ abbr -a m make
 abbr -a g git
 abbr -a vimdiff 'nvim -d'
 
-if status --is-interactive
-    if ! set -q TMUX
-        exec tmux
-    end
-end
-
-
 if command -v exa >/dev/null
     alias l=exa
     alias ls=exa
@@ -44,6 +37,8 @@ set -g fish_prompt_pwd_dir_length 3
 setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
 setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
 setenv FZF_DEFAULT_OPTS '--height 20%'
+
+setenv MANPAGER 'less -R --use-color -Dd+r -Du+b'
 
 function fish_user_key_bindings
     bind \cz 'fg>/dev/null ^/dev/null'

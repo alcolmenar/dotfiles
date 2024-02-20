@@ -2,7 +2,7 @@
 SHELL = "/opt/homebrew/bin/fish"
 
 [font.normal]
-family = "Hack Nerd Font Mono"
+family = "Monoisome"
 
 [[keyboard.bindings]]
 action = "Paste"
