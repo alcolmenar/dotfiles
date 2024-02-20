@@ -2,7 +2,7 @@
 # README
 
 ```bash
-git clone git@github.com:alcolmenar/dotfiles.git ~/.dotfiles
+git clone --recurse-submodules git@github.com:alcolmenar/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-stow .
+stow -S . --dotfiles
 ```
