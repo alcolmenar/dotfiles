@@ -12,4 +12,11 @@ return {
       },
     }
   end,
+  keys = {
+    {
+      "<leader>fc",
+      require("lazyvim.util").telescope("find_files", { cwd = vim.fn.getenv("HOME") .. "/.config", follow = true }),
+      desc = "Find Config File",
+    },
+  },
 }
