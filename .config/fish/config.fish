@@ -43,7 +43,6 @@ end
 
 
 eval "$(pyenv init -)"
-status --is-interactive; and rbenv init - fish | source
 
 # Zoxide setup
 zoxide init fish | source
