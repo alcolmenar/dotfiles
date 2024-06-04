@@ -66,9 +66,10 @@ function fish_prompt
 end
 
 eval "$(pyenv init -)"
-zoxide init fish | source
 status --is-interactive; and rbenv init - fish | source
 
+# Zoxide setup
+zoxide init fish | source
 alias cd=z
 
 # >>> coursier install directory >>>
