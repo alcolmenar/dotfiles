@@ -10,8 +10,8 @@ require("config.lazy")
 --   vim.cmd("source " .. set_theme_path)
 -- end
 
-local base = require("base16-colorscheme")
-base.with_config({
-  telescope_borders = true,
-})
-base.load_from_shell()
+-- local base = require("base16-colorscheme")
+-- base.with_config({
+--   telescope_borders = true,
+-- })
+-- base.load_from_shell()
