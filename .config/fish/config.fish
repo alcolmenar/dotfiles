@@ -5,11 +5,11 @@ abbr -a m make
 abbr -a g git
 abbr -a vimdiff 'nvim -d'
 
-if command -v exa >/dev/null
-    alias l=exa
-    alias ls=exa
-    alias ll='exa -l'
-    alias la='exa -la'
+if command -v eza >/dev/null
+    alias l=eza
+    alias ls=eza
+    alias ll='eza -l'
+    alias la='eza -la'
 else
     alias l=ls
     alias ll='ls -l'
