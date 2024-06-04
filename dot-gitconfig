@@ -1,7 +1,7 @@
 [user]
 	name = Al Colmenar
 	email = aljcolmenar@gmail.com
-	signingkey = /Users/alcolmenar/.ssh/signing_key.pub
+	signingkey = ~/.ssh/signing_key.pub
 [commit]
 	gpgsign = true
 [init]
@@ -24,3 +24,6 @@
   conflictstyle = diff3
 [diff]
   colorMoved = default
+
+[includeIf "hasconfig:remote.*.url:**github.com?score[mb]*/**"]
+  path = ~/.gitconfig_thescore
