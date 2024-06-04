@@ -12,7 +12,7 @@ config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
 
 -- For example, changing the color scheme:
 -- config.color_scheme = "GruvboxDarkHard"
-config.color_scheme = "Gruvbox Material (Gogh)"
+config.color_scheme = "Kanagawa (Gogh)"
 
 config.font_size = 15
 config.font = wezterm.font({ family = "Fira Code" })
