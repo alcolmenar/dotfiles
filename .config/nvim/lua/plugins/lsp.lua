@@ -8,4 +8,12 @@ return {
 
     vim.g.python3_host_prog = "/Users/alcolmenar/.pyenv/versions/py3nvim/bin/python"
   end,
+  opts = {
+    servers = {
+      lexical = {
+        mason = false,
+        cmd = { "/Users/al.colmenar/dev/3rd/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
+      },
+    },
+  },
 }
