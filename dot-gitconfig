@@ -12,6 +12,7 @@
 	format = ssh
 [core]
   pager = delta
+	excludesfile = /Users/al.colmenar/.gitignore_global
 [interactive]
   diffFilter = delta --color-only
 [delta]
