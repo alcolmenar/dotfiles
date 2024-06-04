@@ -5,6 +5,9 @@ local act = wezterm.action
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+-- Set default shell
+config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
+
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
