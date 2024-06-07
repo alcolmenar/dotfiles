@@ -11,6 +11,9 @@ return {
   end,
 
   keys = {
-    { "<leader>o", "<cmd>Octo<cr>", desc = "Octo" },
+    { "<leader>o", "", desc = "+octo" },
+    { "<leader>oo", "<cmd>Octo<cr>", desc = "Command search" },
+    { "<leader>op", "<cmd>Octo pr list<cr>", desc = "PR list" },
+    { "<leader>om", "<cmd>Octo search is:pr is:open user-review-requested:@me<cr>", desc = "Requested PR list" },
   },
 }
