@@ -11,6 +11,7 @@
 [gpg]
 	format = ssh
 [core]
+  editor = nvim
   pager = delta
 	excludesfile = /Users/al.colmenar/.gitignore_global
 [interactive]
