@@ -16,8 +16,6 @@ else
     alias la='ls -la'
 end
 
-[ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
-
 function d
     while test $PWD != /
         if test -d .git
