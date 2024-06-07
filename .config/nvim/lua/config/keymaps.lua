@@ -19,3 +19,4 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 vim.keymap.del("n", "<leader>fc")
 vim.keymap.set("n", ";", ":")
+vim.keymap.set("n", "<leader>y", "<Cmd>let @+ = @%<CR>")
