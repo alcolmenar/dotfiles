@@ -14,7 +14,7 @@ config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
 -- config.color_scheme = "GruvboxDarkHard"
 config.color_scheme = "Kanagawa (Gogh)"
 
-config.font_size = 15
+config.font_size = 13
 config.font = wezterm.font({ family = "Fira Code" })
 -- config.font = wezterm.font({ family = "Monoid" })
 config.bold_brightens_ansi_colors = true
