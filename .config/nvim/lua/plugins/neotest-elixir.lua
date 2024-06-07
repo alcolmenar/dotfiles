@@ -9,4 +9,14 @@ return {
       ["neotest-elixir"] = {},
     },
   },
+  keys = {
+    {
+      "<leader>ta",
+      function()
+        local neotest = require("neotest")
+        neotest.run.attach()
+      end,
+      desc = "Attach",
+    },
+  },
 }
