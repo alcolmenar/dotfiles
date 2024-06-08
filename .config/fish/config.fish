@@ -25,6 +25,8 @@ function d
     end
 end
 
+eval $(/opt/homebrew/bin/brew shellenv)
+
 
 setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
 setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
