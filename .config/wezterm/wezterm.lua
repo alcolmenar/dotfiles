@@ -51,8 +51,8 @@ config.window_padding = {
 	top = 20,
 	bottom = 10,
 }
--- config.window_background_opacity = 0.9
-config.macos_window_background_blur = 20
+config.window_background_opacity = 0.90
+config.macos_window_background_blur = 10
 config.initial_rows = 50
 config.initial_cols = 160
 config.keys = {
