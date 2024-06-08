@@ -9,7 +9,10 @@ return {
     },
   },
   { "arcticicestudio/nord-vim" },
-  { "rebelot/kanagawa.nvim" },
+  { "rebelot/kanagawa.nvim", opts = {
+    transparent = true,
+    dimInactive = true,
+  } },
   { "sainnhe/gruvbox-material" },
   {
     "LazyVim/LazyVim",
