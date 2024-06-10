@@ -11,12 +11,14 @@ config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
--- config.color_scheme = "GruvboxDarkHard"
-config.color_scheme = "Kanagawa (Gogh)"
+config.color_scheme = "GruvboxDarkHard"
+-- config.color_scheme = "Kanagawa (Gogh)"
+-- config.color_scheme = "Catppuccin Mocha"
 
 config.font_size = 13
 config.font = wezterm.font({ family = "Fira Code" })
 -- config.font = wezterm.font({ family = "Monoid" })
+-- config.font = wezterm.font({ family = "Maple Mono" })
 config.bold_brightens_ansi_colors = true
 config.font_rules = {
 	{
@@ -52,7 +54,7 @@ config.window_padding = {
 	bottom = 10,
 }
 config.window_background_opacity = 0.90
-config.macos_window_background_blur = 10
+config.macos_window_background_blur = 20
 config.initial_rows = 50
 config.initial_cols = 160
 config.keys = {
