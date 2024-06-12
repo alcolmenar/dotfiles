@@ -10,6 +10,9 @@ return {
           },
         },
       },
+      extensions = {
+        git_worktree = {},
+      },
     }
   end,
   keys = {
