@@ -1,0 +1,13 @@
+[elixir]
+disabled = true
+
+[custom.elixir]
+format = '[$symbol(v$output )]($style)'
+command = "elixir --short-version 2>/dev/null"
+when = "test -f mix.exs"
+style = 'bold purple'
+symbol = '💧 '
+disabled = true
+
+[kubernetes]
+disabled = false

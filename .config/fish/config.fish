@@ -58,3 +58,5 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+
+starship init fish | source
