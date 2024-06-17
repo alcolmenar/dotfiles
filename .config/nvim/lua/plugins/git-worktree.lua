@@ -1,5 +1,25 @@
 return {
   "alcolmenar/git-worktree.nvim",
+  dependencies = {
+    {
+      "nvim-telescope/telescope.nvim",
+      opts = function()
+        local actions = require("telescope.actions")
+        return {
+          defaults = {
+            mappings = {
+              i = {
+                ["<C-k>"] = actions.close,
+              },
+            },
+          },
+          extensions = {
+            git_worktree = {},
+          },
+        }
+      end,
+    },
+  },
   keys = {
     { "<leader>gw", "", desc = "+worktree" },
     {
