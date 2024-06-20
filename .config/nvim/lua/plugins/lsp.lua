@@ -14,6 +14,15 @@ return {
         mason = false,
         cmd = { "/Users/al.colmenar/dev/3rd/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
       },
+      tailwindcss = {
+        hovers = true,
+        suggestions = true,
+        root_dir = function(fname)
+          local root_pattern =
+            require("lspconfig").util.root_pattern("tailwind.config.cjs", "tailwind.config.js", "postcss.config.js")
+          return root_pattern(fname)
+        end,
+      },
     },
   },
 }
