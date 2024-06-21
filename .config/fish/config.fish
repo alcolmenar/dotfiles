@@ -60,3 +60,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 starship init fish | source
+
+source ~/.config/fish/duskfox.fish
+
+set -x EDITOR nvim
