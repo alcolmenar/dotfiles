@@ -11,7 +11,8 @@ config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "GruvboxDarkHard"
+config.color_scheme = "duskfoxCVD"
+-- config.color_scheme = "GruvboxDarkHard"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "Catppuccin Mocha"
 
