@@ -66,9 +66,46 @@ return {
     end,
   },
   {
+    "EdenEast/nightfox.nvim",
+    opts = {
+      options = {
+        styles = {
+          comments = "italic",
+          conditionals = "italic",
+          keywords = "italic,bold",
+          types = "italic,bold",
+          variables = "bold",
+        },
+        colorblind = {
+          enable = true,
+          severity = {
+            deutan = 1.0,
+            protan = 0.5,
+            tritan = 0.1,
+          },
+        },
+        transparent = true,
+        modules = {
+          cmp = true,
+          gitsigns = true,
+          dap_ui = true,
+          dashboard = true,
+          fidget = true,
+          illuminate = true,
+          lazy = true,
+          neotest = true,
+          neogit = true,
+          notify = true,
+          telescope = true,
+          whichkey = true,
+        },
+      },
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "duskfox",
     },
   },
 }
