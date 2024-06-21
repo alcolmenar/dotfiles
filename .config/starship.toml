@@ -40,6 +40,19 @@ color_purple = '#b16286'
 color_red = '#cc241d'
 color_yellow = '#d79921'
 
+
+[palettes.duskfox_cvd]
+color_bg3 = '#373457'
+color_bg1 = '#232238'
+color_fg0 = '#eae9ff'
+color_blue = '#568aa3'
+color_aqua = '#9cbfc1'
+color_green = '#a3b56e'
+color_orange = '#eabcc9'
+color_purple = '#c4b2f6'
+color_red = '#eba9d5'
+color_yellow = '#f6d6a2'
+
 [os]
 disabled = false
 style = "bg:color_orange fg:color_fg0"
