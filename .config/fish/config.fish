@@ -37,7 +37,8 @@ end
 zoxide init fish | source
 alias cd=z
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+mise activate fish | source
+mise activate --shims | source
 
 direnv hook fish | source
 
