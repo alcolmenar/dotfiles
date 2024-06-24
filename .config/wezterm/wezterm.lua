@@ -16,7 +16,7 @@ config.color_scheme = "duskfoxCVD"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "Catppuccin Mocha"
 
-config.font_size = 13
+config.font_size = 15
 config.font = wezterm.font({ family = "Fira Code" })
 -- config.font = wezterm.font({ family = "Monoid" })
 -- config.font = wezterm.font({ family = "Maple Mono" })
@@ -51,11 +51,11 @@ config.window_decorations = "MACOS_FORCE_ENABLE_SHADOW | RESIZE"
 config.window_padding = {
 	left = 30,
 	right = 30,
-	top = 20,
+	top = 40,
 	bottom = 10,
 }
-config.window_background_opacity = 0.90
-config.macos_window_background_blur = 20
+config.window_background_opacity = 0.9
+config.macos_window_background_blur = 1000
 config.initial_rows = 50
 config.initial_cols = 160
 config.keys = {
