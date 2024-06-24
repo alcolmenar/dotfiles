@@ -17,6 +17,7 @@ $java\
 $kotlin\
 $haskell\
 $python\
+$elixir\
 ${custom.elixir}\
 [](fg:color_blue bg:color_bg3)\
 $kubernetes\
@@ -184,9 +185,12 @@ vimcmd_visual_symbol = '[](bold fg:color_yellow)'
 
 [elixir]
 disabled = true
+symbol = '💧'
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
 
 [custom.elixir]
-command = 'cat `git rev-parse --show-toplevel`/.tool-versions | sed -n -E "s/elixir (ref:)?(v?[0123456789.]*).*/\2/p"'
+command = 'elixir --short-version'
 detect_extensions = ["exs", "ex"]
 shell = ["sh"]
 symbol = '💧'
