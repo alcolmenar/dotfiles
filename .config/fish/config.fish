@@ -17,15 +17,6 @@ else
     alias la='ls -la'
 end
 
-function d
-    while test $PWD != /
-        if test -d .git
-            break
-        end
-        cd ..
-    end
-end
-
 eval $(/opt/homebrew/bin/brew shellenv)
 
 
