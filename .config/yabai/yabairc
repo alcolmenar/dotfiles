@@ -50,16 +50,4 @@ yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off     
 yabai -m rule --apply
 
-
-killall limelight &> /dev/null
-/Users/al.colmenar/Downloads/limelight/bin/limelight &> /dev/null &
-
-sleep 1
-/Users/al.colmenar/Downloads/limelight/bin/limelight -m config width 4
-/Users/al.colmenar/Downloads/limelight/bin/limelight -m config radius 15
-/Users/al.colmenar/Downloads/limelight/bin/limelight -m config placement exterior
-/Users/al.colmenar/Downloads/limelight/bin/limelight -m config active_color 0xff99797b
-/Users/al.colmenar/Downloads/limelight/bin/limelight -m config normal_color 0xff000000
-
-
 echo "yabai configuration loaded.."
