@@ -9,6 +9,11 @@ return {
     vim.g.python3_host_prog = "/Users/alcolmenar/.pyenv/versions/py3nvim/bin/python"
   end,
   opts = {
+    setup = {
+      rust_analyzer = function()
+        return true
+      end,
+    },
     servers = {
       lexical = {
         mason = false,
