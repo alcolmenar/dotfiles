@@ -19,7 +19,6 @@ end
 
 eval $(/opt/homebrew/bin/brew shellenv)
 
-
 setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
 setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
 setenv FZF_DEFAULT_OPTS '--height 20%'
@@ -44,6 +43,7 @@ direnv hook fish | source
 
 # iex history
 export ERL_AFLAGS="-kernel shell_history enabled"
+export KERL_BUILD_DOCS=yes
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
