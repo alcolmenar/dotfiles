@@ -33,9 +33,6 @@ function fish_user_key_bindings
     end
 end
 
-
-eval "$(pyenv init -)"
-
 # Zoxide setup
 zoxide init fish | source
 alias cd=z
