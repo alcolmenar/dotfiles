@@ -3,7 +3,7 @@
 -- Add any additional keymaps here
 
 -- vim.keymap.del({ "n", "t" }, "<C-k>")
-vim.keymap.set({ "i", "n", "v", "x", "s", "c", "o", "l", "t" }, "<C-k>", "<Esc>")
+vim.keymap.set({ "i", "n", "v", "x", "s", "c", "o", "l", "t" }, "<C-k>", "<Esc><Cmd>nohlsearch<CR>")
 vim.keymap.set({ "i", "n", "v", "x", "s", "c", "o", "l", "t" }, "<C-q>", "<Cmd>qa<CR>")
 
 vim.keymap.set("n", "J", "mzJ`z")
@@ -18,4 +18,4 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 vim.keymap.set("n", ";", ":")
-vim.keymap.set("n", "<leader>y", "<Cmd>let @+ = @%<CR>")
+vim.keymap.set("n", "<leader>y", "<Cmd>let @+ = @%<CR>", { desc = "Yank current file path" })
