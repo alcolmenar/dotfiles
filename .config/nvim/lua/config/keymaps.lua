@@ -10,12 +10,12 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll Down Half" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll Up Half" })
 vim.keymap.set("n", "<C-f>", "<C-f>zz", { desc = "Scroll Down" })
 vim.keymap.set("n", "<C-b>", "<C-b>zz", { desc = "Scroll Up" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next Search Result" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Prev Search Result" })
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
