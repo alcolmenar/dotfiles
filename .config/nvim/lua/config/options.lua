@@ -3,3 +3,5 @@
 -- Add any additional options here
 
 vim.opt.colorcolumn = "100"
+local opt = vim.opt
+opt.formatoptions:remove("o")
