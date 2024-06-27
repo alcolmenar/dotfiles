@@ -4,4 +4,5 @@
 
 local opt = vim.opt
 opt.colorcolumn = "100"
+opt.relativenumber = false -- Relative line numbers
 opt.formatoptions:remove("o")
