@@ -21,7 +21,7 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
 setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
-setenv FZF_DEFAULT_OPTS '--height 20%'
+setenv FZF_DEFAULT_OPTS '--height 30%'
 
 setenv MANPAGER 'less -R --use-color -Dd+r -Du+b'
 
