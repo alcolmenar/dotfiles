@@ -5,6 +5,7 @@ abbr -a m make
 abbr -a g git
 abbr -a vimdiff 'nvim -d'
 abbr -a lg lazygit
+abbr -a man batman
 
 if command -v eza >/dev/null
     alias l=eza
