@@ -205,7 +205,7 @@ format = '[ $symbol$context( \($namespace\)) ]($style)'
 
 [custom.git_repo]
 when = 'test "`git rev-parse --is-inside-work-tree 2> /dev/null`" = "true"'
-command = 'git remote get-url origin | sed -E "s/.*\/(.*).git$/\1/"'
+command = 'git remote get-url origin | perl -pe "s|.*/(.*?)(\.git)?\$|\1|"'
 disabled = false
 shell = ["sh"]
 symbol = "󰊢"
