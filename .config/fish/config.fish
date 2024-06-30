@@ -25,11 +25,10 @@ end
 
 eval $(/opt/homebrew/bin/brew shellenv)
 
-setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
-setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
-setenv FZF_DEFAULT_OPTS '--height 30%'
-
-setenv MANPAGER 'less -R --use-color -Dd+r -Du+b'
+set -gx FZF_DEFAULT_COMMAND 'fd --type file --follow'
+set -gx FZF_DEFAULT_OPTS '--height 40% --reverse --border --highlight-line --inline-info'
+set -gx FZF_CTRL_T_COMMAND "command fd -t f . \$dir 2> /dev/null | sed '1d; s#^\./##'"
+set -gx FZF_CTRL_T_OPTS "--preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden)' --preview-window=top,40% --height=100%"
 
 function fish_user_key_bindings
     bind \cz 'fg>/dev/null ^/dev/null'
