@@ -48,11 +48,10 @@ mise activate --shims | source
 direnv hook fish | source
 
 # iex history
-export ERL_AFLAGS="-kernel shell_history enabled"
-export KERL_BUILD_DOCS=yes
+set -x ERL_AFLAGS "-kernel shell_history enabled"
+set -x KERL_BUILD_DOCS yes
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+set -x XDG_CONFIG_HOME "$HOME/.config"
 
 starship init fish | source
 
