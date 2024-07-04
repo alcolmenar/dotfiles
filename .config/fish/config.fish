@@ -8,7 +8,7 @@ abbr -a lg lazygit
 abbr -a man batman
 
 # Kill process fzf
-abbr -a kp -- "begin; date; ps -ef; end | fzf --bind='ctrl-r:reload(date; ps -ef)' --header='Press CTRL-R to reload' --header-lines=2 --preview='echo {}' --preview-window=down,3,wrap --layout=reverse --height=80% | awk '{print $2}' | xargs kill -9"
+abbr -a kp -- "begin; date; ps -ef; end | fzf --bind='ctrl-r:reload(date; ps -ef)' --header='Press CTRL-R to reload' --header-lines=2 --preview='echo {}' --preview-window=down,3,wrap --layout=reverse --height=80% | awk '{print \$2}' | xargs kill -9"
 
 abbr -a lsplog -- 'tail -f ~/.local/state/nvim/lsp.log | bat -pp -f -l log --theme "Solarized (dark)"'
 
