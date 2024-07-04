@@ -12,6 +12,9 @@ abbr -a kp -- "begin; date; ps -ef; end | fzf --bind='ctrl-r:reload(date; ps -ef
 
 abbr -a lsplog -- 'tail -f ~/.local/state/nvim/lsp.log | bat -pp -f -l log --theme "Solarized (dark)"'
 
+# Aliases
+alias dot 'cd ~/.dotfiles'
+
 if command -v eza >/dev/null
     alias l='eza --icons --git'
     alias ls=l
