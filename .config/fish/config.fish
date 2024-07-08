@@ -14,6 +14,8 @@ abbr -a lsplog -- 'tail -f ~/.local/state/nvim/lsp.log | bat -pp -f -l log --the
 
 # Aliases
 alias dot 'cd ~/.dotfiles'
+alias cas 'cd ~/dev/thescore/casino/develop'
+alias edge 'cd ~/dev/thescore/edgebook/develop'
 
 if command -v eza >/dev/null
     alias l='eza --icons --git'
