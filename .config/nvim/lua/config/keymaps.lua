@@ -2,7 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.keymap.set("n", "<C-c>", "<C-c><Cmd>nohlsearch<CR>")
 vim.keymap.set({ "i", "n", "v", "x", "s", "c", "o", "l", "t" }, "<C-q>", "<Cmd>qa<CR>")
 
 vim.keymap.set("n", "J", "mzJ`z")
