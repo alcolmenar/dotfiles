@@ -7,3 +7,5 @@
 *.iml
 
 .mise.toml
+.mise.toml.bak
+.projections.json
