@@ -44,7 +44,8 @@ config.front_end = "WebGpu"
 
 config.adjust_window_size_when_changing_font_size = false
 config.debug_key_events = false
-config.hide_tab_bar_if_only_one_tab = true
+config.hide_tab_bar_if_only_one_tab = false
+config.tab_bar_at_bottom = false
 config.native_macos_fullscreen_mode = false
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "MACOS_FORCE_ENABLE_SHADOW | RESIZE"
@@ -54,6 +55,13 @@ config.window_padding = {
 	top = 40,
 	bottom = 10,
 }
+local TITLEBAR_COLOR = "#333333"
+-- config.window_frame = {
+-- 	-- font = wezterm.font({ family = "Hack", weight = "Bold" }),
+-- 	font_size = 13.0,
+-- 	active_titlebar_bg = "#FFFFFF",
+-- 	inactive_titlebar_bg = TITLEBAR_COLOR,
+-- }
 config.window_background_opacity = 0.9
 config.macos_window_background_blur = 1000
 config.initial_rows = 50
@@ -87,7 +95,64 @@ config.keys = {
 	{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
 }
 
+config.status_update_interval = 1000
+
+local function show_beam_cpu(cells)
+	-- Add an entry for each battery (typically 0 or 1)
+	local result, stdout, stderr = wezterm.run_child_process({ "ps", "-Ao", "%cpu,command" })
+	local sum = 0.0
+	local match = false
+	for s in string.gmatch(stdout, "[^\r\n]+") do
+		if string.match(s, "beam") then
+			local number = string.match(s, "^%s*([^ ]+)")
+			sum = sum + tonumber(number)
+			match = true
+		end
+	end
+
+	if match then
+		table.insert(cells, string.format("%5.1f%% Beam CPU", sum))
+	end
+end
+
 -- and finally, return the configuration to wezterm
+wezterm.on("update-status", function(window, pane)
+	local cells = {}
+
+	show_beam_cpu(cells)
+	local batt_icons = { "", "", "", "", "" }
+	for _, b in ipairs(wezterm.battery_info()) do
+		local curr_batt_icon = batt_icons[math.ceil(b.state_of_charge * #batt_icons)]
+		table.insert(cells, string.format("%s %.0f%%", curr_batt_icon, b.state_of_charge * 100))
+	end
+
+	-- Color palette for each cell
+	local text_fg = "#c0c0c0"
+	local colors = {
+		"#000000",
+		"#3c1361",
+		"#52307c",
+		"#663a82",
+		"#7c5295",
+		"#b491c8",
+	}
+
+	local elements = {}
+	while #cells > 0 and #colors > 1 do
+		local text = table.remove(cells, 1)
+		local prev_color = table.remove(colors, 1)
+		local curr_color = colors[1]
+
+		-- table.insert(elements, { Background = { Color = prev_color } })
+		table.insert(elements, { Foreground = { Color = curr_color } })
+		table.insert(elements, { Text = "" })
+		table.insert(elements, { Background = { Color = curr_color } })
+		table.insert(elements, { Foreground = { Color = text_fg } })
+		table.insert(elements, { Text = " " .. text .. " " })
+	end
+	window:set_right_status(wezterm.format(elements))
+end)
+
 wezterm.on("user-var-changed", function(window, pane, name, value)
 	local overrides = window:get_config_overrides() or {}
 	if name == "ZEN_MODE" then
