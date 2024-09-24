@@ -15,10 +15,10 @@ return {
       end,
     },
     servers = {
-      lexical = {
-        mason = false,
-        cmd = { "/Users/al.colmenar/dev/3rd/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
-      },
+      -- lexical = {
+      --   mason = false,
+      --   cmd = { "/Users/al.colmenar/dev/3rd/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
+      -- },
       tailwindcss = {
         hovers = true,
         suggestions = true,
