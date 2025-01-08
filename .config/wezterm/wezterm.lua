@@ -10,6 +10,8 @@ config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
 
 -- This is where you actually apply your config choices
 
+config.scrollback_lines = 20000
+
 -- For example, changing the color scheme:
 config.color_scheme = "duskfoxCVD"
 -- config.color_scheme = "GruvboxDarkHard"
