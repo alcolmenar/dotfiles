@@ -8,3 +8,5 @@ opt.relativenumber = true -- Relative line numbers
 
 -- Don't auto comment new line created by hitting o
 opt.formatoptions:remove("o")
+
+vim.g.maplocalleader = ","
