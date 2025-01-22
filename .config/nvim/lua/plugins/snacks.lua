@@ -19,5 +19,8 @@ return {
         { section = "startup" },
       },
     },
+    animate = {
+      duration = 1,
+    },
   },
 }
