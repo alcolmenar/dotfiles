@@ -32,3 +32,6 @@
 
 [includeIf "hasconfig:remote.*.url:**github.com?score[mb]*/**"]
   path = ~/.gitconfig_thescore
+
+[includeIf "hasconfig:remote.*.url:**github.com?penn-interactive/**"]
+  path = ~/.gitconfig_penn
