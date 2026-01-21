@@ -18,28 +18,30 @@ config.color_scheme = "duskfoxCVD"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "Catppuccin Mocha"
 
-config.font_size = 15
-config.font = wezterm.font({ family = "Fira Code" })
+config.font_size = 14
+-- config.font = wezterm.font({ family = "Fira Code" })
+config.font = wezterm.font({ family = "Iosevka Term Light" })
+config.cell_width = 1.1
 -- config.font = wezterm.font({ family = "Monoid" })
 -- config.font = wezterm.font({ family = "Maple Mono" })
 config.bold_brightens_ansi_colors = true
-config.font_rules = {
-	{
-		intensity = "Bold",
-		italic = true,
-		font = wezterm.font({ family = "Maple Mono", weight = "Bold", style = "Italic" }),
-	},
-	{
-		italic = true,
-		intensity = "Half",
-		font = wezterm.font({ family = "Maple Mono", weight = "DemiBold", style = "Italic" }),
-	},
-	{
-		italic = true,
-		intensity = "Normal",
-		font = wezterm.font({ family = "Maple Mono", style = "Italic" }),
-	},
-}
+-- config.font_rules = {
+-- 	{
+-- 		intensity = "Bold",
+-- 		italic = true,
+-- 		font = wezterm.font({ family = "Maple Mono", weight = "Bold", style = "Italic" }),
+-- 	},
+-- 	{
+-- 		italic = true,
+-- 		intensity = "Half",
+-- 		font = wezterm.font({ family = "Maple Mono", weight = "DemiBold", style = "Italic" }),
+-- 	},
+-- 	{
+-- 		italic = true,
+-- 		intensity = "Normal",
+-- 		font = wezterm.font({ family = "Maple Mono", style = "Italic" }),
+-- 	},
+-- }
 
 config.freetype_load_target = "HorizontalLcd"
 config.front_end = "WebGpu"
@@ -64,8 +66,8 @@ local TITLEBAR_COLOR = "#333333"
 -- 	active_titlebar_bg = "#FFFFFF",
 -- 	inactive_titlebar_bg = TITLEBAR_COLOR,
 -- }
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 1000
+-- config.window_background_opacity = 0.9
+-- config.macos_window_background_blur = 1000
 config.initial_rows = 50
 config.initial_cols = 160
 config.keys = {

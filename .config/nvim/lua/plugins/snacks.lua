@@ -22,5 +22,6 @@ return {
     animate = {
       duration = 1,
     },
+    image = {},
   },
 }
